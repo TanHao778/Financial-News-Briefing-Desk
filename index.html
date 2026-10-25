@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e8">
+  <meta name="description" content="财经公告标注与质量评测工作台项目作品集：PDF处理、字段证据、人工审核和飞书报表。">
+  <title>财经公告标注与质量评测工作台 · 项目作品集</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="print.css" media="print">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="回到页面顶部">
+        <span class="brand-mark">F<span>/</span>W</span>
+        <span><strong>FINANCE WORKBENCH</strong><small>项目作品集 · 2026</small></span>
+      </a>
+      <nav class="main-nav" aria-label="作品集导航">
+        <a class="nav-link active" href="#overview">项目全景</a>
+        <a class="nav-link" href="#workflow">自动化流程</a>
+        <a class="nav-link" href="#feishu">飞书报表</a>
+        <a class="nav-link" href="#quality">数据与评测</a>
+        <a class="nav-link" href="#portfolio">作品集 PDF</a>
+      </nav>
+      <a class="top-cta" href="https://ocnuo85vin72.feishu.cn/share/base/dashboard/shrcnVlyGtctbtbcQ0J1tM8n6ve" target="_blank" rel="noopener noreferrer">
+        打开飞书看板 <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-wrap" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> 单 Agent · 财经公告标注与审核</p>
+          <h1>把一份业绩快报，<br><em>变成有依据的标注结果。</em></h1>
+          <p class="hero-lede">一个以 Python 和飞书多维表格构建的项目工作台。它从 PDF 提取八项关键字段、保留页码证据、生成快讯草稿，再把结果交给人工审核与质量评测。</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#workflow">查看处理流程 <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="https://ocnuo85vin72.feishu.cn/base/XQwNbO8zpaprG2sebRxcnoHqnYb" target="_blank" rel="noopener noreferrer">查看飞书多维表格 <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-note"><span class="note-icon">i</span><span>这是一个可演示的个人项目原型。候选结果仍需人工审核；测试集未运行，模型 API 尚未配置。</span></div>
+        </div>
+
+        <div class="hero-visual" aria-label="项目流程状态概览">
+          <div class="visual-topline"><span>PIPELINE / 01</span><span>更新于 2026.10.24</span></div>
+          <div class="visual-title"><strong>公告处理工作流</strong><span class="status-pill"><i></i> 可演示</span></div>
+          <div class="mini-flow">
+            <div class="mini-node done"><span>01</span><b>PDF 入队</b><small>原件校验</small></div><i class="flow-arrow">→</i>
+            <div class="mini-node done"><span>02</span><b>文字提取</b><small>质量分流</small></div><i class="flow-arrow">→</i>
+            <div class="mini-node done"><span>03</span><b>字段候选</b><small>八字段 + 证据</small></div>
+          </div>
+          <div class="mini-flow second-flow">
+            <div class="mini-node done"><span>04</span><b>证据检查</b><small>页码核验</small></div><i class="flow-arrow">→</i>
+            <div class="mini-node done"><span>05</span><b>快讯草稿</b><small>模板生成</small></div><i class="flow-arrow">→</i>
+            <div class="mini-node done"><span>06</span><b>飞书写回</b><small>幂等同步</small></div>
+          </div>
+          <div class="visual-footer">
+            <div><span class="ring-small">07</span><span><b>人工审核</b><small>等待审核操作</small></span></div>
+            <div><span class="ring-small muted-ring">08</span><span><b>质量评测</b><small>人工评分 / 开发集诊断</small></span></div>
+          </div>
+          <div class="visual-stamp">PYTHON × FEISHU<br><b>证据先行</b></div>
+        </div>
+        <div class="hero-index">01 <span>/</span> PROJECT SNAPSHOT</div>
+      </section>
+
+      <section class="metric-band section-wrap" aria-label="项目数据快照">
+        <div class="metric-intro"><span>PROJECT<br>SNAPSHOT</span><p>以当前已核对的清单、运行和飞书记录为准</p></div>
+        <div class="metric"><strong>33</strong><span>份 PDF 已盘点</span><small>原件保留 · 哈希登记</small></div>
+        <div class="metric"><strong>08</strong><span>项核心字段</span><small>值、单位、页码与证据</small></div>
+        <div class="metric"><strong>05</strong><span>份种子答案已确认</span><small>少样例口径参考</small></div>
+        <div class="metric metric-accent"><strong>18 <i>/</i> 10</strong><span>开发 / 测试候选</span><small>尚未冻结；测试集保持隔离</small></div>
+      </section>
+
+      <section class="section-wrap workflow-section" id="workflow">
+        <div class="section-heading">
+          <div><p class="eyebrow">FROM PDF TO REVIEW</p><h2>流程不只展示节点，<br><em>每一步都留下运行状态。</em></h2></div>
+          <p class="section-aside">点击节点查看该环节的作用。状态取自当前实现，不用虚构样例补齐进度。</p>
+        </div>
+        <div class="workflow-board">
+          <div class="workflow-track" role="tablist" aria-label="处理流程节点">
+            <button class="workflow-step selected" type="button" role="tab" aria-selected="true" data-step="intake"><span>01</span><b>公告与样本</b><small>读取 PDF / 核对名单</small></button>
+            <span class="track-link" aria-hidden="true"></span>
+            <button class="workflow-step" type="button" role="tab" aria-selected="false" data-step="text"><span>02</span><b>文字与 OCR</b><small>提取 / 质量分流</small></button>
+            <span class="track-link" aria-hidden="true"></span>
+            <button class="workflow-step" type="button" role="tab" aria-selected="false" data-step="fields"><span>03</span><b>八字段候选</b><small>规则基线 / 可选模型</small></button>
+            <span class="track-link" aria-hidden="true"></span>
+            <button class="workflow-step" type="button" role="tab" aria-selected="false" data-step="evidence"><span>04</span><b>证据检查</b><small>字段与原文匹配</small></button>
+            <span class="track-link" aria-hidden="true"></span>
+            <button class="workflow-step" type="button" role="tab" aria-selected="false" data-step="draft"><span>05</span><b>快讯草稿</b><small>固定模板生成</small></button>
+            <span class="track-link" aria-hidden="true"></span>
+            <button class="workflow-step" type="button" role="tab" aria-selected="false" data-step="sync"><span>06</span><b>飞书写回</b><small>运行编号去重</small></button>
+            <span class="track-link waiting-link" aria-hidden="true"></span>
+            <button class="workflow-step waiting" type="button" role="tab" aria-selected="false" data-step="review"><span>07</span><b>人工审核</b><small>核对 / 修订</small></button>
+            <span class="track-link waiting-link" aria-hidden="true"></span>
+            <button class="workflow-step waiting" type="button" role="tab" aria-selected="false" data-step="eval"><span>08</span><b>质量评测</b><small>评分 / 汇总</small></button>
+          </div>
+          <div class="step-detail" role="tabpanel" aria-live="polite">
+            <div class="step-detail-index"><span>01</span><small>PROCESS DETAIL</small></div>
+            <div><h3 id="step-title">公告与样本核验</h3><p id="step-copy">核对样本是否属于开发集、校验原始 PDF 的 SHA-256，并把每次处理写入独立运行记录。测试集样本会在处理前被拒绝。</p></div>
+            <div class="step-detail-status"><span class="status-check">✓</span><span><b id="step-status">已接入</b><small id="step-meta">只读原件 · 不覆盖旧运行</small></span></div>
+          </div>
+          <div class="workflow-caption"><span class="caption-line"></span><span>规则基线已经可运行；模型请求需先配置接口并在批次开始前确认。</span><a href="#quality">查看能力边界 <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="section-wrap case-grid">
+          <div class="case-copy">
+            <p class="eyebrow">REAL RUN / NEW ANNOUNCEMENT</p>
+            <h2>真实公告进来后，<br><em>系统实际留下了什么？</em></h2>
+            <p>国药一致 2026 年前三季度业绩快报进入工作台后，规则基线提取到 8 项字段中的 7 项，并将候选、证据、快讯草稿和运行状态写入飞书。</p>
+            <p class="fine-print">7/8 是候选覆盖率，不是字段准确率。原因字段没有找到可引用依据，因此保留待审核状态，没有自动推断。</p>
+            <a class="text-link" href="https://ocnuo85vin72.feishu.cn/base/XQwNbO8zpaprG2sebRxcnoHqnYb?table=tbl0AvtNnRDbbWBX" target="_blank" rel="noopener noreferrer">在飞书打开运行结果表 <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="record-card">
+            <div class="record-head"><div><small>RUN RECORD · 新公告</small><strong>N5b36b1f9cbc9</strong></div><span class="synced-tag"><i></i> 已写回飞书</span></div>
+            <div class="record-company"><span class="company-icon">国</span><div><b>国药集团一致药业股份有限公司</b><small>2026年1—9月 · 业绩快报</small></div></div>
+            <div class="candidate-meter"><div><span>机器候选覆盖</span><b>7 <small>/ 8 字段</small></b></div><div class="meter"><i style="width:87.5%"></i></div><small>原因字段待人工核对 · 覆盖率不代表正确率</small></div>
+            <div class="field-grid">
+              <div><small>证券代码</small><b>000028</b></div>
+              <div><small>营业收入</small><b>5,506,609.03 <i>万元</i></b></div>
+              <div><small>收入同比</small><b>−0.11%</b></div>
+              <div><small>归母净利润</small><b>95,249.00 <i>万元</i></b></div>
+              <div><small>净利润同比</small><b>−0.48%</b></div>
+              <div class="field-unresolved"><small>业绩变化原因</small><b>未定位 · 待审核</b></div>
+            </div>
+            <div class="record-foot"><span>规则基线运行</span><span>证据与页码已关联</span><span>草稿需人工审核</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrap feishu-section" id="feishu">
+        <div class="section-heading">
+          <div><p class="eyebrow">FEISHU BASE / REPORTS</p><h2>项目过程在本地演示，<br><em>数据和图表落在飞书。</em></h2></div>
+          <div class="snapshot-label"><span class="live-dot"></span><span><b>飞书数据快照</b><small>读取于 2026-10-24 22:12</small></span></div>
+        </div>
+        <div class="feishu-links">
+          <a class="feishu-link-card" href="https://ocnuo85vin72.feishu.cn/share/base/dashboard/shrcnCBfBDOzBCDtYwItdwoUXdv" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">↗</span><span><b>财经公告工作台｜项目驾驶舱</b><small>样本分组、资格分布与标注任务概览</small></span><span class="link-tenant">组织内访问</span>
+          </a>
+          <a class="feishu-link-card" href="https://ocnuo85vin72.feishu.cn/share/base/dashboard/shrcnVlyGtctbtbcQ0J1tM8n6ve" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">↗</span><span><b>财经公告快讯｜项目流程工作台</b><small>运行状态、候选覆盖率、人工评分图表</small></span><span class="link-tenant">组织内访问</span>
+          </a>
+          <a class="feishu-link-card" href="https://ocnuo85vin72.feishu.cn/base/XQwNbO8zpaprG2sebRxcnoHqnYb" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">↗</span><span><b>打开项目多维表格</b><small>样本、标注、运行结果、评分与任务表</small></span><span class="link-tenant">组织内访问</span>
+          </a>
+        </div>
+        <div class="dashboard-grid">
+          <article class="dashboard-card dashboard-status">
+            <div class="dashboard-card-head"><span class="chart-icon">◉</span><span><b>新公告运行状态</b><small>飞书图表：运行状态环形图</small></span><span class="chart-menu">•••</span></div>
+            <div class="status-chart-wrap">
+              <div class="donut"><div><strong>01</strong><small>份运行</small></div></div>
+              <div class="chart-legend"><div><i class="legend-orange"></i><span>待审核 / 流程阻塞</span><b>1</b></div><div><i class="legend-green"></i><span>已完成评测</span><b>0</b></div><small>状态按实际审核记录统计</small></div>
+            </div>
+          </article>
+          <article class="dashboard-card dashboard-coverage">
+            <div class="dashboard-card-head"><span class="chart-icon blue-icon">▥</span><span><b>八字段候选覆盖</b><small>飞书图表：候选覆盖率柱状图</small></span><span class="chart-menu">•••</span></div>
+            <div class="coverage-total"><strong>87.5<span>%</span></strong><small>7 / 8 个字段有候选<br>单份新公告运行</small></div>
+            <div class="bar-list" aria-label="各字段候选覆盖情况">
+              <div><span>公司与代码</span><i><b style="width:100%"></b></i><em>2/2</em></div>
+              <div><span>报告期</span><i><b style="width:100%"></b></i><em>1/1</em></div>
+              <div><span>收入及同比</span><i><b style="width:100%"></b></i><em>2/2</em></div>
+              <div><span>归母净利及同比</span><i><b style="width:100%"></b></i><em>2/2</em></div>
+              <div class="bar-missing"><span>变化原因</span><i><b style="width:0%"></b></i><em>0/1</em></div>
+            </div>
+            <p class="chart-caveat">候选覆盖只代表字段有输出，不代表值正确。</p>
+          </article>
+          <article class="dashboard-card dashboard-rating">
+            <div class="dashboard-card-head"><span class="chart-icon purple-icon">✳</span><span><b>人工评分五维对比</b><small>飞书图表：规则 / 模型评分雷达图</small></span><span class="chart-menu">•••</span></div>
+            <div class="empty-radar">
+              <svg viewBox="0 0 240 170" role="img" aria-label="暂无人工评分数据，雷达图未绘制">
+                <polygon points="120,18 175,58 154,124 86,124 65,58" fill="none" stroke="#ddd8ce"/>
+                <polygon points="120,42 157,69 143,108 97,108 83,69" fill="none" stroke="#e8e4dc"/>
+                <line x1="120" y1="18" x2="120" y2="124" stroke="#e8e4dc"/><line x1="65" y1="58" x2="154" y2="124" stroke="#e8e4dc"/><line x1="175" y1="58" x2="86" y2="124" stroke="#e8e4dc"/>
+              </svg>
+              <div><strong>暂无评分</strong><small>没有绘制演示数据<br>评分写入后才会出现对比</small></div>
+            </div>
+          </article>
+        </div>
+        <p class="feishu-footnote"><span>!</span> 这张展示页使用 2026-10-24 的真实项目快照绘制。点开上方链接可查看飞书原生图表；飞书页面需要当前组织账号登录。本页不会直接读取访问者的飞书账号。</p>
+      </section>
+
+      <section class="quality-section" id="quality">
+        <div class="section-wrap quality-layout">
+          <div class="quality-intro"><p class="eyebrow">EVALUATION / EVIDENCE</p><h2>展示结果，也展示<br><em>结果的边界。</em></h2><p>评测模块同时保留分母、标注方式和数据来源。机器候选覆盖、候选辅助一致性与独立测试准确率是不同指标，不混在一起展示。</p><a class="text-link" href="https://ocnuo85vin72.feishu.cn/base/XQwNbO8zpaprG2sebRxcnoHqnYb?table=tblXw4WBOGNLmeFk" target="_blank" rel="noopener noreferrer">查看飞书人工评分表 <span aria-hidden="true">↗</span></a></div>
+          <div class="evaluation-panel">
+            <div class="eval-head"><span>开发集一致性诊断</span><small>001—003 · 候选辅助 / 旧版辅助</small></div>
+            <div class="eval-row"><span>字段值一致</span><b>24 <i>/ 24</i></b><div class="eval-track"><i style="width:100%"></i></div></div>
+            <div class="eval-row"><span>单位一致</span><b>12 <i>/ 12</i></b><div class="eval-track"><i style="width:100%"></i></div></div>
+            <div class="eval-row"><span>证据页匹配</span><b>24 <i>/ 24</i></b><div class="eval-track"><i style="width:100%"></i></div></div>
+            <div class="eval-warning"><span>!</span><p><b>不能称为独立准确率</b><small>三份标准答案有候选辅助背景；10份测试集仍隔离，尚未运行。</small></p></div>
+            <div class="eval-tags"><span>答案来源分组</span><span>样本级分母</span><span>不读取测试答案</span></div>
+          </div>
+          <div class="boundary-list">
+            <div><span class="boundary-num">01</span><b>已实现</b><p>规则候选、证据校验、草稿、人工审核、飞书幂等写回和状态追踪。</p></div>
+            <div><span class="boundary-num">02</span><b>已接代码，待配置</b><p>真实模型批次需要可用 API；每批会提示外发内容并要求确认。</p></div>
+            <div><span class="boundary-num">03</span><b>本机待补</b><p>OCR 路径已接入；当前电脑的 OCR 引擎环境尚未完成配置。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrap portfolio-section" id="portfolio">
+        <div class="section-heading">
+          <div><p class="eyebrow">PORTFOLIO / PDF</p><h2>把项目过程整理成<br><em>一份可带走的作品集。</em></h2></div>
+          <a class="button button-dark" href="assets/财经公告快讯工作台_作品集.pdf" download>下载六页 PDF <span aria-hidden="true">↓</span></a>
+        </div>
+        <a class="portfolio-preview" href="assets/财经公告快讯工作台_作品集.pdf" target="_blank" rel="noopener noreferrer" aria-label="打开六页作品集 PDF">
+          <img src="assets/作品集总览.png" alt="六页财经公告标注与审核工作台作品集缩略总览">
+          <span class="preview-badge">6 PAGES · OPEN PDF ↗</span>
+        </a>
+        <div class="portfolio-caption"><span>内容：自动化流程、字段证据、审核标注、开发集诊断、飞书写回与能力边界。</span><span>缩略图使用已生成的作品集原图；页面图表为当日真实数据的展示快照。</span></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><span class="brand-mark">F<span>/</span>W</span><div><b>财经公告标注与质量评测工作台</b><small>个人项目作品集 · 快照日期 2026-10-24</small></div></div>
+      <p>Python 规则基线 · 飞书多维表格 · 单 Agent 工作流</p>
+      <a href="#top">回到顶部 ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
